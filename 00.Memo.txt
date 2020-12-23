@@ -1,2 +1,9 @@
 🎯 In general, how to "limit" the scope of data input: E.g. define 
     def __init__(self, first, last, pay): to be string, string, integers only!
+
+🎯 STOP the ever growing apply_raise() everytime we apply the func
+
+
+🧭 set default to None: https://youtu.be/RSl87lqOXDE?t=660
+🎯 TODO - master the concept of default None!
+
