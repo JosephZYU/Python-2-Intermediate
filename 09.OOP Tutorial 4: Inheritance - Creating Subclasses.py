@@ -87,7 +87,7 @@ class Manager(Employee):
 
     def print_member(self):
         return [member.full_name() for member in self.team_member]
-        # print(member.full_name())
+        # print(member.full_name()) # ✅👎 OK - BUT not recommended
 
 
 Emp_1 = Employee('Corey', 'SCHAFER', 100_000)
@@ -100,15 +100,22 @@ Dev_4 = Developer('Lumber', 'Jack', 10_000, 'Python')
 
 # 👀 Make sure to use square bracket [ ] to indicate it is a variable
 
-Mgr_1 = Manager('Sue', 'Smith', 90_000, 'Partner', [Dev_1])
-Mgr_2 = Manager('Mark', 'Gilbert', 90_000, 'Director', [Dev_2])
+Mgr_1 = Manager('  Sue', 'SMITH  ', 90_000, 'Partner', [Dev_1])
+Mgr_2 = Manager('  Mark', 'GILBERT  ', 90_000, 'Director', [Dev_2])
 
 
-# 🎯 TODO - All right, we know super.__init__ will inherit from the previous class - what about the transformation
-# Testify - whether it also inherits the strip().lower() methods from above as well
+# ✅ YES - All right, we know super.__init__ will inherit from the previous class - what about the transformation
+# YES it does - whether it also inherits the strip().lower() methods from above as well
 
+print(Mgr_1.full_name())
+print(Mgr_2.full_name())
 
-# 🎯 ⛔️ WARNING: this method ONLY display one member at a time. How to show available members? ⛔️
+print(len(Mgr_1.full_name()))
+print(len(Mgr_2.full_name()))
+
+print()
+
+# ✅ SOLVED: this method ONLY display one member at a time. How to show available members?
 # We might need to create an empty container to hold all team members - YES. Return will ONLY show one instance at a time
 # 😎 Although you ONLY get one-shot to return, but you can place that in a container [ ]
 # Ref - https://stackoverflow.com/a/41391005 (Returning multiple values from a loop)
