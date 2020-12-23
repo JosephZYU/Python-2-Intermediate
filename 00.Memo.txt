@@ -1,0 +1,2 @@
+🎯 In general, how to "limit" the scope of data input: E.g. define 
+    def __init__(self, first, last, pay): to be string, string, integers only!
