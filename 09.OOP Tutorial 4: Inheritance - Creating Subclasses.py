@@ -87,7 +87,7 @@ class Manager(Employee):
 
     def print_member(self):
         return [member.full_name() for member in self.team_member]
-        # print(member.full_name()) # ✅👎 OK - BUT not recommended
+        # print(member.full_name()) # ✅ 👎 OK - BUT not recommended
 
 
 Emp_1 = Employee('Corey', 'SCHAFER', 100_000)
@@ -173,7 +173,7 @@ print(issubclass(Manager, Employee))
 print(issubclass(Developer, Manager))
 print(issubclass(Manager, Developer))
 
-"""# ✅👎 Test if print() will show all members
+"""# ✅ 👎 Test if print() will show all members
 
 Mgr_1.print_member()
 print()
