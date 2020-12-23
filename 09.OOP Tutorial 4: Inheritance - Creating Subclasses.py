@@ -121,6 +121,9 @@ print()
 # Ref - https://stackoverflow.com/a/41391005 (Returning multiple values from a loop)
 # Ref - https://stackoverflow.com/a/11178075 (Print list without brackets in a single row)
 
+# 🧠 ', '.join(list)
+# Quickly separate i from a list without bracket
+
 print(
     f"The initial member from {Mgr_1.full_name()} includes {''.join(Mgr_1.print_member())}.")
 print(
@@ -150,8 +153,27 @@ print(
 print(
     f"The final updated members from {Mgr_2.full_name()} includes {''.join(Mgr_2.print_member())}.")
 
+print()
 
-"""# ✅ Test if print() will show all members
+# 🧠 isinstance()
+# Test instance from a certain class
+
+print(isinstance(Mgr_1, Employee))
+print(isinstance(Mgr_1, Developer))
+print(isinstance(Mgr_1, Manager))
+
+print()
+
+# 🧠 issubclass()
+# Test if a class is considered a subclass from another class
+
+print(issubclass(Developer, Employee))
+print(issubclass(Manager, Employee))
+
+print(issubclass(Developer, Manager))
+print(issubclass(Manager, Developer))
+
+"""# ✅👎 Test if print() will show all members
 
 Mgr_1.print_member()
 print()
