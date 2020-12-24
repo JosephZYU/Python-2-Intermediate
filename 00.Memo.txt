@@ -7,3 +7,8 @@
 🧭 set default to None: https://youtu.be/RSl87lqOXDE?t=660
 🎯 TODO - master the concept of default None!
 
+🎯 Don't forget to review:
+
+03. 2nd half
+👇
+19. Decorator with arguments
