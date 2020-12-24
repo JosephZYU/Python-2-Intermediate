@@ -4,8 +4,8 @@
 🎯 STOP the ever growing apply_raise() everytime we apply the func
 
 
-🧭 set default to None: https://youtu.be/RSl87lqOXDE?t=660
-🎯 TODO - master the concept of default None!
+✅ TODO - master the concept of default None!
+✅ Ref - 27. host_name='Alexa'
 
 🎯 Don't forget to review:
 
