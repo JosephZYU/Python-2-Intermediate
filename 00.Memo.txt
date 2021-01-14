@@ -12,3 +12,6 @@
 03. 2nd half
 👇
 19. Decorator with arguments
+👇
+Python (3) Advanced - 02.Context Managers - Efficiently Managing Resources
+https://youtu.be/-aKFBoZpiqA?t=550
