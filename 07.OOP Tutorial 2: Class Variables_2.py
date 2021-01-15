@@ -21,6 +21,8 @@ class Employee(object):
     # ✅ why place "constant" at the beginngin does'n work
     # ✅ It works, you just need to place self.company_name with self.
     raise_pct = .03  # 3.0 % annual pay raise
+    # number of employees must bs counted on the whole class-level
+    num_employees = 0
 
     company_name = 'aws'
     email_ext = 'com'
@@ -38,6 +40,8 @@ class Employee(object):
         self.last = last
         self.pay = pay
 
+        Employee.num_employees += 1
+
     def full_name(self):
         return f"{self.first} {self.last}"
 
@@ -48,8 +52,11 @@ class Employee(object):
         self.pay = int(self.pay * (1 + self.raise_pct))
 
 
+print(Employee.num_employees)
 emp_1 = Employee('Corey', 'Schafer', 150_000)
+print(Employee.num_employees)
 emp_2 = Employee('Joseph', 'Yu', 50_000)
+print(Employee.num_employees)
 
 print(Employee.raise_pct)
 print(emp_1.raise_pct)
@@ -63,6 +70,11 @@ print(emp_2.__dict__)
 
 Employee.raise_pct = 0.05
 emp_1.raise_pct = 0.1
+
+
+print(Employee.raise_pct)
+print(emp_1.raise_pct)
+print(emp_2.raise_pct)
 
 print(Employee.__dict__)
 print(emp_1.__dict__)
