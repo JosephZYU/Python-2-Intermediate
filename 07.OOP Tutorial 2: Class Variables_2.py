@@ -21,6 +21,7 @@ class Employee(object):
     # ✅ why place "constant" at the beginngin does'n work
     # ✅ It works, you just need to place self.company_name with self.
     raise_pct = .03  # 3.0 % annual pay raise
+
     # number of employees must bs counted on the whole class-level
     num_employees = 0
 
@@ -53,8 +54,18 @@ class Employee(object):
 
 
 print(Employee.num_employees)
+
 emp_1 = Employee('Corey', 'Schafer', 150_000)
 print(Employee.num_employees)
+
+
+# Method 1 of 2: class.func(instance_1)
+# Method 2 of 2: instance_1.func()
+
+print(Employee.full_name(emp_1))
+print(emp_1.full_name())
+
+
 emp_2 = Employee('Joseph', 'Yu', 50_000)
 print(Employee.num_employees)
 
