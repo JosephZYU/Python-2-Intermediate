@@ -6,6 +6,8 @@
 🧭 S2 - time - https://youtu.be/eirjjyP2qcQ?t=460
 🧭 S3 - datetime_advanced* - https://youtu.be/eirjjyP2qcQ?t=690
 🧭 S4 - timezone_advanced* - https://youtu.be/eirjjyP2qcQ?t=818
+🧭 S5 - timezone_conversion_advanced* - https://youtu.be/eirjjyP2qcQ?t=1065
+
 
 
 """
@@ -58,3 +60,31 @@ print(utcnow_dt)
 """
 
 # Timezone converstion ✨
+# Convert UTZ to your local/regional timezone E.g Shanghai, CN
+# Pro-tips: for China -> PRC
+
+# Ref - https://stackoverflow.com/q/13866926
+
+# for tz in pytz.all_timezones:
+#     print(tz)
+
+# Ref-ONLY now_utc_dt.astimezone(pytz.timezone('PRC')) 👎👎
+# tips: now_utc.astimezone(pytz.timezone('timezone_string'))
+
+sh_dt = now_utc_dt.astimezone(pytz.timezone('PRC'))
+
+mt_dt = now_utc_dt.astimezone(pytz.timezone('US/Mountain'))
+
+ph_dt = now_utc_dt.astimezone(pytz.timezone('US/Eastern'))
+
+
+print(sh_dt)
+print(mt_dt)
+print(ph_dt)
+
+# 🌟 BEST way to set timezone aware now!
+# 🧠🧠 dt.datetime.now(tz=pytz.timezone('timezone_string'))
+# 不要重复convert，直接调用tz=pytz.timezone() 生成需要的local time
+
+print(dt.datetime.now(tz=pytz.timezone('Singapore')))  # 👍👍
+print(dt.datetime.now(tz=pytz.UTC).astimezone(pytz.timezone('Singapore')))  # 👎
