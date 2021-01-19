@@ -5,6 +5,8 @@
 🧭 S1 - date - https://youtu.be/eirjjyP2qcQ?t=45
 🧭 S2 - time - https://youtu.be/eirjjyP2qcQ?t=460
 🧭 S3 - datetime_advanced* - https://youtu.be/eirjjyP2qcQ?t=690
+🧭 S4 - timezone_advanced* - https://youtu.be/eirjjyP2qcQ?t=818
+
 
 """
 # pip install pytz
@@ -26,15 +28,33 @@ bday = dt.date(2021, 9, 19)
 till_bday = bday - tday
 
 
-dtime = dt.datetime(2020, 1, 19, 9, 19, 45, 100_000)
-
-
 # Principle: ALWAYS work with UTC when dealing with timezone!
-today_dt = dt.datetime.today()
-now_dt = dt.datetime.now()
-utcnow_dt = dt.datetime.utcnow()
+
+today_dt = dt.datetime.today()  # no tzinfo!
+now_dt = dt.datetime.now()  # 👍
+utcnow_dt = dt.datetime.utcnow()  # 👎
 
 
 print(today_dt)
 print(now_dt)
 print(utcnow_dt)
+
+# Create timezone aware datetime with UTC
+# 🧠🧠 tzinfo = pytz.UTC
+
+dtime = dt.datetime(2020, 1, 19, 9, 19, 45, tzinfo=pytz.UTC)  # manul set-up
+print(dtime)
+
+# Create now_dt with time zone
+
+# 🧠🧠 now(tz=pytz.UTC)
+now_utc_dt = dt.datetime.now(tz=pytz.UTC)
+print(now_utc_dt)
+
+"""
+# Let's re-define utcnow with replace()
+utcnow_dt = dt.datetime.utcnow().replace(tzinfo=pytz.UTC)  # 👎
+print(utcnow_dt)
+"""
+
+# Timezone converstion ✨
