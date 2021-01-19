@@ -6,8 +6,6 @@
 🧭 S3 - datetime_advanced* - https://youtu.be/eirjjyP2qcQ?t=690
 
 
-
-
 """
 
 import datetime as dt
