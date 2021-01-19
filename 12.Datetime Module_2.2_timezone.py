@@ -7,8 +7,7 @@
 🧭 S3 - datetime_advanced* - https://youtu.be/eirjjyP2qcQ?t=690
 🧭 S4 - timezone_advanced* - https://youtu.be/eirjjyP2qcQ?t=818
 🧭 S5 - timezone_conversion_advanced* - https://youtu.be/eirjjyP2qcQ?t=1065
-
-
+🧭 S6 - timezone_format_advanced* - https://youtu.be/eirjjyP2qcQ?t=1420
 
 """
 # pip install pytz
@@ -88,3 +87,30 @@ print(ph_dt)
 
 print(dt.datetime.now(tz=pytz.timezone('Singapore')))  # 👍👍
 print(dt.datetime.now(tz=pytz.UTC).astimezone(pytz.timezone('Singapore')))  # 👎
+print('-------------------------------------------')
+
+
+# Display with user-friendly ISO format 打印出易读的ISO格式
+
+cn_dt = dt.datetime.now(tz=pytz.timezone('PRC'))
+
+print(cn_dt)
+print(cn_dt.isoformat())
+
+# Print out with cusomt output
+# 🧠 dt.strftime('')
+
+print(cn_dt.strftime('%B %d, %Y'))
+print(cn_dt.strftime('%b %d, %Y'))
+
+# Convert string into real datetime
+# 🧠🧠 dt.datetime.strptime(str_dt, 'format')
+
+str_dt = 'Jan 19, 2021'
+
+new_dt = dt.datetime.strptime(str_dt, '%b %d, %Y')
+
+print(new_dt)
+
+# strftime: FROM time into string
+# strptime: Parse string into time

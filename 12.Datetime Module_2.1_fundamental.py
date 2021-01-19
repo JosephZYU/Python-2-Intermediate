@@ -6,8 +6,7 @@
 🧭 S3 - datetime_advanced* - https://youtu.be/eirjjyP2qcQ?t=690
 🧭 S4 - timezone_advanced* - https://youtu.be/eirjjyP2qcQ?t=818
 🧭 S5 - timezone_conversion_advanced* - https://youtu.be/eirjjyP2qcQ?t=1065
-
-
+🧭 S6 - timezone_format_advanced* - https://youtu.be/eirjjyP2qcQ?t=1420
 
 """
 
