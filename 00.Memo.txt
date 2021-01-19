@@ -1,3 +1,17 @@
+git add . && git commit -m "update 2.2" && git push
+
+Ref - https://superuser.com/a/1079420
+
+
+& : Execute command2 after execution of command1 has finished
+
+&& : Execute command2 only if execution of command1 has finished successfully
+
+|| : Execute command2 only if execution of command1 has finished unsuccessfully
+
+
+
+
 🎯 In general, how to "limit" the scope of data input: E.g. define 
     def __init__(self, first, last, pay): to be string, string, integers only!
 
@@ -15,3 +29,4 @@
 👇
 Python (3) Advanced - 02.Context Managers - Efficiently Managing Resources
 https://youtu.be/-aKFBoZpiqA?t=550
+
