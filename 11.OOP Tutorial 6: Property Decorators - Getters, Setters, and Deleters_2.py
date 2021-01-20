@@ -37,6 +37,8 @@ class Employee(object):
 
     # setter is ALL about pass the updated information back into __init__
     # setter 的本质是让用户更自然地，整体回传跟新后的信息，适合分子话的跟新
+    # ✅ setter 是否必须首先是基于property？如果只是regular method可以使用吗？
+    # ✅ YES - must be associated with property
 
     @fullname.setter
     def fullname(self, name):

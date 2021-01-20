@@ -108,8 +108,10 @@ emp_2 = Employee('Joseph', 'Yu', 10_000)
 
 print(emp_1)
 
+print('--------------')
 print(emp_1.__repr__())
 print(emp_1.__str__())
+print('--------------')
 
 print(1 + 2)
 
