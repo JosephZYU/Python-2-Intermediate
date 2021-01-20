@@ -1,3 +1,4 @@
+"""
 git add . && git commit -m "update 2.2" && git push
 
 Ref - https://superuser.com/a/1079420
@@ -8,14 +9,15 @@ Ref - https://superuser.com/a/1079420
 && : Execute command2 only if execution of command1 has finished successfully
 
 || : Execute command2 only if execution of command1 has finished unsuccessfully
+"""
 
 
-
-
-🎯 In general, how to "limit" the scope of data input: E.g. define 
+Optional - 🎯✅ In general, how to "limit" the scope of data input: E.g. define 
     def __init__(self, first, last, pay): to be string, string, integers only!
 
-🎯 STOP the ever growing apply_raise() everytime we apply the func
+    Ref - https://stackoverflow.com/a/9321953 👍👍
+    Ref - https://stackoverflow.com/a/51737200 👍👍
+
 
 
 ✅ TODO - master the concept of default None!

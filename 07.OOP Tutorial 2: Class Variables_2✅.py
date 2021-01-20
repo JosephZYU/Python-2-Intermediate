@@ -1,10 +1,6 @@
 """
 Jan 14, 2020
 
-# 🎯 How to force/ensure class attributes are a specific data type?
-# TODO: https://stackoverflow.com/a/9321953
-
-
 Does () has any impact on the class
 
 class Employee:
@@ -28,15 +24,16 @@ class Employee(object):
     company_name = 'aws'
     email_ext = 'com'
 
-    # 🎯 How to force/ensure class attributes are a specific data type?
-    # TODO: https://stackoverflow.com/a/9321953
+    # ✅ How to force/ensure class attributes are a specific data type? ⏩⏩⏩
+    # Ref - https://stackoverflow.com/a/9321953 👍
+    # Ref - https://stackoverflow.com/a/51737200 👍
 
     # class variables: variables that are shared among ALL instances of a class
     # it should be the same for ALL instances within the class
 
     # instance variables: can be unique for each instance
 
-    def __init__(self, first, last, pay):
+    def __init__(self, first: str, last: str, pay: int):
         self.first = first
         self.last = last
         self.pay = pay

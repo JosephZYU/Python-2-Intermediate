@@ -65,12 +65,20 @@ class Employee:
 
     🧠 staticmethod
 
-    🎯 TODO - combine 5 or 6 into shorter expression
+    ✅ combine 5 or 6 into shorter expression - add \ in the end!
+    Ref - https://stackoverflow.com/a/181557
+
+    #if cond1 == 'val1' and cond2 == 'val2' and \
+    #                   cond3 == 'val3' and \
+                       cond4 == 'val4':
+    do_something
+
     """
 
     @staticmethod
     def is_weekday(day):
-        if day.weekday() == 5 or day.weekday() == 6:
+        if day.weekday() == 5 or \
+           day.weekday() == 6:
             return False
         return True
 

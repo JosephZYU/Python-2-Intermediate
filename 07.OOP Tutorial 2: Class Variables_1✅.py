@@ -39,8 +39,8 @@ print(emp1.apply_raise())
 print(emp2.apply_raise())
 
 
-# ⛔️ CAUTION: we can NOT apply the raise repetitively, set number back to original ⛔️
-# 🎯 TODO - stop the ever-growing apply_raise()
+# ⛔️ CAUTION: we can NOT apply the raise repetitively ⛔️
+# ✅ stop the ever-growing apply_raise() - apply_raise(）仅仅是乘数效应，并没有影响增幅的百分比%
 
 print(Employee.raise_factor)
 print(emp1.raise_factor)
@@ -50,6 +50,15 @@ print(emp2.raise_factor)
 # 👀 Remember to use comma to separate for print out
 print("Attributes from class (Employee) include:", Employee.__dict__)
 print("Attributes from instance (emp1) include:", emp1.__dict__)
+
+# ✅ how to print all elements from dictionary
+# 🧠 dictionary.items()
+# 利用.items() 拆分 key 和 value，分别列印
+
+for key, value in Employee.__dict__.items():
+    print(key)
+    print(value)
+    print()
 
 # Manually re-set class-wide raise_factor to 5%
 
