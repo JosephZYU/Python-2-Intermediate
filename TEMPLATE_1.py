@@ -64,7 +64,7 @@ class Employee:
 
 class Developer(Employee):
     def __init__(self, first, last, pay, prog_lang: str):
-        super().__init__(self, first, last)  # type
+        super().__init__(first, last, pay)  # type
         assert type(prog_lang) == str
 
         self.prog_lang = property
@@ -79,8 +79,29 @@ class Manager(Employee):
         else:
             self.staffs = staffs
 
+    def add_member(self, member):  # type
+        if member not in self.staffs:
+            self.staffs.append(member)
 
-emp_1 = Employee('Corey', 'SCHAFER', 100_000)
+    def remove_member(self, member):  # type
+        if member in self.staffs:
+            self.staffs.remove(member)
+
+    def print_staffs(self):  # type
+
+        if not self.staffs:
+            print(' --> No staff')
+
+        for member in self.staffs:
+            print(' -->', member.fullname, end='')
+
+    def remove_mul_members(self, *args):
+        for member in args:
+            if member in self.staffs:
+                self.staffs.remove(member)
+
+
+emp_1 = Employee('Jane', 'Zhu', 100_000)
 emp_2 = Employee('Joseph', 'yu', 50_000)
 
 Employee
@@ -90,3 +111,34 @@ emp_2
 emp_str_1 = 'John-Doe-70000'
 emp_str_2 = 'Steve-Smith-30000'
 emp_str_3 = 'Jane-Scahfer-90000'
+
+
+mgr_1 = Manager('Corey', 'Schafer', 100_000)
+mgr_2 = Manager('Jane', 'Schafer', 100_000)
+
+
+mgr_1.print_staffs()
+
+mgr_1.add_member(emp_1)
+mgr_1.print_staffs()
+print()
+
+
+mgr_1.add_member(emp_2)
+mgr_1.print_staffs()
+print()
+
+
+print(isinstance(emp_1, Manager))  # isintance(instance, class)
+print(isinstance(mgr_1, Manager))
+
+
+# 🎯 remove multiple employees at once!
+
+mgr_1.remove_mul_members(emp_2)
+mgr_1.print_staffs()
+print()
+
+mgr_1.remove_mul_members(emp_1)
+mgr_1.print_staffs()
+print()

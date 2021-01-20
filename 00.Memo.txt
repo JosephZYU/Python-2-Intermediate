@@ -34,3 +34,24 @@ Optional - ✅ In general, how to "limit" the scope of data input: E.g. define
 Python (3) Advanced - 02.Context Managers - Efficiently Managing Resources
 https://youtu.be/-aKFBoZpiqA?t=550
 
+
+
+
+
+"""
+# Topic - how to get undefined number of arguments in python
+# Ref - https://www.codegrepper.com/code-examples/delphi/how+to+get+undefined+number+of+arguments+in+python
+
+def multiply(*args):
+    z = 1
+    for num in args:
+        z *= num
+    print(z)
+
+
+multiply()
+multiply(4, 5)
+multiply(10, 9)
+multiply(2, 3, 4)
+multiply(3, 5, 10, 6)
+"""
