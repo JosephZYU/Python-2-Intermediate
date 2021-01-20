@@ -14,10 +14,17 @@ class Employee:
 
     @property
     def email(self):
-        return f'{self.first.lower()}.{self.last.lower()}@google.com'
+        return f'{self.first}.{self.last}@google.com'
 
     def raise_pay(self):
         self.pay = int(self.pay * (1 + self.raise_pct))
+
+    def monthly_schedule(self, month):
+        response = requests.get(f'http://company.com/{self.last}/{month}')
+        if response.ok:
+            return response.text
+        else:
+            return 'Bad Response!'
 
 
 # emp_1 = Employee('Joseph', 'Yu', 50_000)
