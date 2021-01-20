@@ -11,13 +11,15 @@ Ref - https://superuser.com/a/1079420
 || : Execute command2 only if execution of command1 has finished unsuccessfully
 """
 
+创建重复复习的template！，不断重复，专注一部分练习，而不是全篇整体复习！
 
-Optional - 🎯✅ In general, how to "limit" the scope of data input: E.g. define 
+Optional - ✅ In general, how to "limit" the scope of data input: E.g. define 
     def __init__(self, first, last, pay): to be string, string, integers only!
 
-    Ref - https://stackoverflow.com/a/9321953 👍👍
-    Ref - https://stackoverflow.com/a/51737200 👍👍
+    Solution - https://stackoverflow.com/a/46850529 👍👍👍
 
+    Ref - https://stackoverflow.com/a/9321953
+    Ref - https://stackoverflow.com/a/51737200
 
 
 ✅ TODO - master the concept of default None!
