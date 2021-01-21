@@ -9,6 +9,13 @@
 🧭 S5 - timezone_conversion_advanced* - https://youtu.be/eirjjyP2qcQ?t=1065
 🧭 S6 - timezone_format_advanced* - https://youtu.be/eirjjyP2qcQ?t=1420
 
+😎 在建立的时候要流出冗余，在取值的时候在做割舍
+
+dt.datetime(year, month, day).date()
+dt.datetime(year, month, day).time()
+dt.datetime.now().date()
+dt.datetime.now().time()
+
 """
 # pip install pytz
 
