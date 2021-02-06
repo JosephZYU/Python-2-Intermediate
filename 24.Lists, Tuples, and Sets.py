@@ -29,3 +29,22 @@ i = courses.index('Math') + 1
 courses[i:i] = new
 
 print(courses)
+
+
+# ✅ set practices
+
+# Create set (dict-style)
+courses = {'History', 'Math', 'Physics', 'CompSci'}
+new = {'Art', 'Math', 'Physics', 'English'}
+
+print(courses.intersection(new))
+print(new.intersection(courses))
+
+# Union
+print(courses.union(new))
+print(new.union(courses))
+
+# Difference
+# 🧠 difference: what's unique from the base item 什么是本体独有的？
+print(courses.difference(new))
+print(new.difference(courses))
