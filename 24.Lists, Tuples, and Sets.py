@@ -55,6 +55,6 @@ print(courses.union(new))
 print(new.union(courses))
 
 # Difference
-# 🧠 difference: what's unique from the base item 什么是本体独有的？
+# 🧠 difference: what's unique from the base item 什么是本体所独有的？
 print(courses.difference(new))
 print(new.difference(courses))
