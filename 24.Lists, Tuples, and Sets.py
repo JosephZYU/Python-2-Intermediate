@@ -30,6 +30,16 @@ courses[i:i] = new
 
 print(courses)
 
+# Tuple
+# 🧠 create empty set with set()
+emp_set = set()
+
+emp_set.add('lalala')
+emp_set.add('lalala')
+emp_set.add('lalala')
+
+print(emp_set)
+
 
 # ✅ set practices
 
