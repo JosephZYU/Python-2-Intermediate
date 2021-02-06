@@ -1,19 +1,20 @@
+# ✅ insert()
 courses = ['History', 'Math', 'Physics', 'CompSci']
 new = ['Art', 'Education']
 
-# Test insert()
-"""
-for i in range(4):
-    courses.insert(i, new)
-    print(courses)
-"""
+courses.insert(2, new)
+print(courses)
 
-# Test extend()
-# courses.extend(1, new)
+# ✅ extend()
+courses = ['History', 'Math', 'Physics', 'CompSci']
+new = ['Art', 'Education']
 
-# print(courses)
+courses.extend(new)
+print(courses)
 
-# Test insert with extend (split all items from the liust)
+# ✅ Insert & extend (split all items from the list)
+courses = ['History', 'Math', 'Physics', 'CompSci']
+new = ['Art', 'Education']
 
 # 1st - locate the index of target item 首先定位需要目标的下标
 # 🧠 list.index('item') -> list.index()
@@ -22,7 +23,7 @@ for i in range(4):
 
 i = courses.index('Math') + 1
 
-# 2nd - insert and extend at the sametime ⭐️ 同时加入
+# 2nd - insert and extend at the sametime ⭐️ 同时加入 & 拆分 所有要素！
 # https://stackoverflow.com/a/652200/15063197
 # 🧠 list[i:i] = new_li
 courses[i:i] = new
